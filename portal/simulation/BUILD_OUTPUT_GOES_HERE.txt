@@ -1,0 +1,2 @@
+Run ./web/build_web.sh from an activated Emscripten SDK shell.
+The generated HTML, JavaScript, WebAssembly and data files are copied here.

@@ -1,0 +1,22 @@
+AquaNexus - MSYS2 UCRT64
+
+1) Open the "MSYS2 UCRT64" terminal.
+
+2) Update MSYS2:
+   pacman -Syu
+
+   If it asks you to close the terminal, reopen MSYS2 UCRT64 and run pacman -Syu again.
+
+3) Install dependencies:
+   pacman -S --needed mingw-w64-ucrt-x86_64-toolchain mingw-w64-ucrt-x86_64-cmake mingw-w64-ucrt-x86_64-ninja mingw-w64-ucrt-x86_64-glfw mingw-w64-ucrt-x86_64-glew mingw-w64-ucrt-x86_64-glm
+
+4) cd into this extracted folder.
+
+5) Build:
+   chmod +x build_msys2.sh
+   ./build_msys2.sh
+
+6) Run:
+   ./build/bin/AquaVillage3D_Cinematic.exe
+
+The shaders directory is automatically copied beside the executable.

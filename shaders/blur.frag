@@ -1,0 +1,2 @@
+in vec2 vUV; out vec4 FragColor; uniform sampler2D uImage; uniform vec2 uDirection; uniform vec2 uScreenSize;
+void main(){ vec2 t=uDirection/uScreenSize; vec3 c=texture(uImage,vUV).rgb*.227027; c+=texture(uImage,vUV+t*1.384615).rgb*.316216; c+=texture(uImage,vUV-t*1.384615).rgb*.316216; c+=texture(uImage,vUV+t*3.230769).rgb*.070270; c+=texture(uImage,vUV-t*3.230769).rgb*.070270; FragColor=vec4(c,1); }

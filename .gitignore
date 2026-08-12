@@ -1,0 +1,9 @@
+build/
+build-web/
+*.exe
+*.dll
+*.o
+*.obj
+*.wasm
+*.html
+*.js
