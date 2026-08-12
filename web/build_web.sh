@@ -15,6 +15,10 @@ for artifact in "$build_dir"/bin/AquaVillage3D_Cinematic.*; do
   [[ -f "$artifact" ]] && cp -f "$artifact" "$portal_dir/"
 done
 
+if [[ -f "$script_dir/coi-serviceworker.js" ]]; then
+  cp -f "$script_dir/coi-serviceworker.js" "$portal_dir/"
+fi
+
 # Rename the generated HTML to index.html so GitHub Pages serves it directly
 if [[ -f "$portal_dir/AquaVillage3D_Cinematic.html" ]]; then
   mv "$portal_dir/AquaVillage3D_Cinematic.html" "$portal_dir/index.html"
