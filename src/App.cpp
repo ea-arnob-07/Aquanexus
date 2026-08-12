@@ -372,7 +372,7 @@ void App::frame(){
 
 void App::run(){
 #ifdef __EMSCRIPTEN__
-    emscripten_set_main_loop_arg([](void* p){ static_cast<App*>(p)->frame(); },this,0,1);
+    emscripten_set_main_loop_arg([](void* p){ static_cast<App*>(p)->frame(); },this,0,0);
 #else
     while(!glfwWindowShouldClose(window_)) frame();
 #endif

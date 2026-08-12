@@ -4,6 +4,6 @@ build-web/
 *.dll
 *.o
 *.obj
-*.wasm
-*.html
-*.js
+build-web/*.wasm
+build-web/*.html
+build-web/*.js

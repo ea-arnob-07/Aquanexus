@@ -600,6 +600,7 @@ void SceneRenderer::drawVillage(bool shadowPass){
     // It fills the previously empty frame without moving or recoloring any existing object.
     // Distant scenery is omitted from the shadow pass to keep the original shadow budget intact.
     if(!shadowPass){
+#ifndef __EMSCRIPTEN__
         Material farGround{{0.20f,0.34f,0.085f},0.97f,0.0f,11,false};
         Material hillNear{{0.14f,0.29f,0.095f},0.98f,0.0f,3,false};
         Material hillFar{{0.095f,0.20f,0.105f},0.99f,0.0f,3,false};
@@ -776,6 +777,7 @@ void SceneRenderer::drawVillage(bool shadowPass){
             drawObject(cube_,B*glm::translate(glm::mat4(1),{-0.09f,0,-0.36f})*glm::rotate(glm::mat4(1),glm::radians(-9.0f),glm::vec3(0,1,0))*glm::scale(glm::mat4(1),{0.055f,0.035f,0.28f}),birdWing,false);
             drawObject(cube_,B*glm::translate(glm::mat4(1),{ 0.09f,0,-0.36f})*glm::rotate(glm::mat4(1),glm::radians( 9.0f),glm::vec3(0,1,0))*glm::scale(glm::mat4(1),{0.055f,0.035f,0.28f}),birdWing,false);
         }
+#endif
     }
 }
 

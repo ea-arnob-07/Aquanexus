@@ -1,16 +1,3 @@
-cd "/c/Users/Asus/Downloads/aquanexus (2)/aquanexus"
-chmod +x build_msys2.sh run_msys2.sh
-./build_msys2.sh
-./run_msys2.sh
-
-
-
-
-
-
-
-
-
 
 cmake_minimum_required(VERSION 3.20)
 project(AquaVillage3D_Cinematic VERSION 4.0.0 LANGUAGES CXX)
@@ -67,6 +54,7 @@ if(EMSCRIPTEN)
         "-sALLOW_MEMORY_GROWTH=1"
         "-sASSERTIONS=0"
         "--preload-file" "${CMAKE_CURRENT_SOURCE_DIR}/shaders@/shaders"
+        "--shell-file" "${CMAKE_CURRENT_SOURCE_DIR}/web/shell.html"
     )
     set_target_properties(AquaVillage3D_Cinematic PROPERTIES SUFFIX ".html")
 else()
